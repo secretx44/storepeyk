@@ -22,7 +22,11 @@ function ProductList() {
 
   return (
     <div>
-      <select value={selectedCategory} onChange={handleCategoryChange}>
+      <select
+        value={selectedCategory}
+        onChange={handleCategoryChange}
+        className="text-center flex justify-center items-center mx-auto  bg-slate-400 text-white text-xl font-bold"
+      >
         <option value="">All categories</option>
         {categories.map((category) => (
           <option key={category} value={category}>
@@ -30,12 +34,12 @@ function ProductList() {
           </option>
         ))}
       </select>
-      <ul>
+      <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 place-items-center text-justify py-1">
         {filteredProducts.map((product) => (
-          <div key={product.id}>
+          <div key={product.id} className="flex bg-slate-400 w-56">
             <Link to={`/products/${product.id}`}>
               <p>{product.title}</p>
-              <img src={product.image} alt={product.title} />
+              <img src={product.image} alt={product.title} className="w-full" />
             </Link>
           </div>
         ))}

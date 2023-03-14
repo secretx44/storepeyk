@@ -2,11 +2,12 @@ import React from "react"
 import "./index.css"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import Navbar from "./components/Navbar"
-import Homepage from "./components/Homepage"
+
 import Products from "./components/Products"
 import ProductDetails from "./components/ProductDetails"
 
 import Categories from "./components/Categories"
+import Homepage from "./components/Homepage"
 function App() {
   return (
     <Router>

@@ -1,9 +1,9 @@
 import React from "react"
-
+import buys from "../assets/buys.jpg"
 function Homepage() {
   return (
-    <div>
-      <h1>Homepage</h1>
+    <div className="bg-cover w-full">
+      <img src={buys} alt="" className="bg-cover w-full h-[100vh]" />
     </div>
   )
 }

@@ -3,9 +3,9 @@ import "./index.css"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import Navbar from "./components/Navbar"
 
-import Products from "./components/Products"
+// import Products from "./components/Products"
 import ProductDetails from "./components/ProductDetails"
-
+import Footer from "./components/Footer"
 import Categories from "./components/Categories"
 import Homepage from "./components/Homepage"
 function App() {
@@ -14,9 +14,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Categories />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/products" element={<Categories />} />
         <Route path="/products/:id" element={<ProductDetails />} />
       </Routes>
+      <Footer />
     </Router>
   )
 }

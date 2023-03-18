@@ -12,7 +12,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-function ModalBtn(props) {
+function ModalBtn() {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -30,7 +30,6 @@ function ModalBtn(props) {
               <Text fontWeight="bold" mb="1rem">
                 You are about to buy this product
               </Text>
-              <img src={props.image} alt={props.title} />
             </ModalBody>
 
             <ModalFooter>
